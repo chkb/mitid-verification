@@ -6,5 +6,5 @@ definePageMeta({
 </script>
 
 <template>
-  <img src="cheapwines.png" alt="" />
+  <img src="/cheapwines.png" alt="" />
 </template>
