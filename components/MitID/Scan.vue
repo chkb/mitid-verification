@@ -24,7 +24,7 @@ async function longPoll() {
     // An error - let's show it
     console.log(response.statusText)
     // Reconnect in one second
-    await new Promise((resolve) => setTimeout(resolve, 5000))
+    await new Promise((resolve) => setTimeout(resolve, 2000))
     await longPoll()
   } else {
     // Get and show the message

@@ -32,7 +32,7 @@ const closeDialog = () => {
 const scanned = () => {
   setTimeout(() =>{
     closeDialog()
-  },5000)
+  },3000)
   switchContentEnum(components.result);
 };
 </script>
