@@ -7,4 +7,6 @@ definePageMeta({
 
 <template>
   <img src="/cheapwines.png" alt="" />
+  <MitIDVerification>
+  </MitIDVerification>
 </template>
