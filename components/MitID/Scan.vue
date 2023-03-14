@@ -32,10 +32,8 @@ async function longPoll() {
     await longPoll();
   } else {
     // Get and show the message
-    let message:any = await response.json;
-    console.log(message);
-
-    if (message?.response === 'true') {
+    let message:any = await response.json();
+    if (message?.response) {
       longPollSucces();
     } else {
       // Call subscribe() again to get the next message
