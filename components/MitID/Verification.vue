@@ -19,16 +19,21 @@ const componentState = ref(components.validate)
 const switchContentEnum = (newState:components) => {
   componentState.value = newState;
 }
+
 const validate = (sessionId: string) => {
   sessionIdObject.value.sessionId = sessionId;
   switchContentEnum(components.scan);
 };
-const scanned = () => {
-  switchContentEnum(components.result);
-};
 
 const closeDialog = () => {
   dialogOpen.value = false;
+};
+
+const scanned = () => {
+  setTimeout(() =>{
+    closeDialog()
+  },5000)
+  switchContentEnum(components.result);
 };
 </script>
 
@@ -39,7 +44,7 @@ const closeDialog = () => {
     <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
       <Validate @validate="validate" v-if="componentState==components.validate" />
       <Scan @scanned="scanned" :sessionId="sessionIdObject.sessionId" v-if="componentState==components.scan" />
-      <Result @done="closeDialog" v-if="componentState==components.result" />
+      <Result v-if="componentState==components.result" />
     </div>
   </div>
 </div>
