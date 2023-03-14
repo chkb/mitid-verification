@@ -29,7 +29,7 @@ enum components {
 
 }
 
-const componentState = ref(components.result)
+const componentState = ref(components.validate)
 
 const switchContentEnum = (newState:components) => {
   componentState.value = newState;
