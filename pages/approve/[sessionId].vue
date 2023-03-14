@@ -25,27 +25,7 @@ const swipeClick = async () => {
 <template>
   <div class="flex justify-center">
     <div class="items-center">
-      <p class="title">CheapWines.com spørger dig</p>
-      <p class="subtitle">Er du over 18 år?</p>
       <img style="width: 100vw" @click="swipeClick" src="/swipe.png" alt="" />
     </div>
   </div>
 </template>
-
-<style>
-.title{
-  font-weight: 800;
-    position: absolute;
-    top: 278px;
-    padding-left: 32px;
-    font-size: 20px;
-}
-
-.subtitle{
-  font-weight: 600;
-    position: absolute;
-    top: 378px;
-    padding-left: 32px;
-    font-size: 16px;
-}
-</style>
