@@ -21,8 +21,8 @@ const swipeClick = async () => {
       response: true
     }), // body data type must match "Content-Type" header
   });
+  const res = await response.json();
   approved.value = true;
-  const res = response.json();
 }
 </script>
 
