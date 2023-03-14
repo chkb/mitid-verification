@@ -6,9 +6,7 @@ const endpoint:string = "https://bystrup.net/anonymous/v1/anonymous/";
 const props = defineProps({
   sessionId: String
 })
-console.log("🚀 ~ file: Scan.vue:9 ~ props:", props)
 const url:string = `${endpoint}${props.sessionId}`
-
 const emit = defineEmits(['scanned'])
 
 const longPollSucces = () => {

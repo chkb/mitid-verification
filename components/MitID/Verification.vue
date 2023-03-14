@@ -23,6 +23,9 @@ const validate = (sessionId: string) => {
   sessionIdObject.value.sessionId = sessionId;
   switchContentEnum(components.scan);
 };
+const scanned = () => {
+  switchContentEnum(components.result);
+};
 
 const closeDialog = () => {
   dialogOpen.value = false;
@@ -35,7 +38,7 @@ const closeDialog = () => {
   <div class="fixed inset-0 z-10 overflow-y-auto">
     <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
       <Validate @validate="validate" v-if="componentState==components.validate" />
-      <Scan :sessionId="sessionIdObject.sessionId" v-if="componentState==components.scan" />
+      <Scan @scanned="scanned" :sessionId="sessionIdObject.sessionId" v-if="componentState==components.scan" />
       <Result @done="closeDialog" v-if="componentState==components.result" />
     </div>
   </div>
