@@ -27,7 +27,7 @@ const swipeClick = async () => {
     <div class="items-center">
       <p class="title">CheapWines.com spørger dig</p>
       <p class="subtitle">Er du over 18 år?</p>
-      <img @click="swipeClick" src="/swipe.png" alt="" />
+      <img style="width: 100vw" @click="swipeClick" src="/swipe.png" alt="" />
     </div>
   </div>
 </template>
